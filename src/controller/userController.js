@@ -10,7 +10,7 @@ const createUser = async function (req, res) {
 }
 
 
-const getUsersData = async function (req, res) {
+const craea = async function (req, res) {
 
 
     let allUsers = await UserModel.find()
@@ -18,6 +18,14 @@ const getUsersData = async function (req, res) {
     res.send( { msg: allUsers } )
 }
 
+
+
+const allBooks = async function (req, res) {
+
+
+  const authorDetails = await UserModel.find(authorName: "chetan Bhagat")
+
+    res.send( { msg: allUsers } )
 
 module.exports.createUser = createUser
 
