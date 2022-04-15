@@ -1,18 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const BookController = require('../books/bookController.js')
-const UserController = require('../controller/userController.js')
+//const BookController = require('../books/bookController.js')
+//const UserController = require('../controller/userController.js')
+
+const authorController = require('../controller/authorController.js')
 
 
 
-const res = require('express/lib/response');
-
-const bodyParser = require('body-parser');
-const { append } = require('express/lib/response');
-
-
-
+/*
 router.get('/test-mongoose', function (req, res) {
 
     res.send( { msg: "Hi FUnctionUp mongoosedb seekha !"} )
@@ -28,9 +24,22 @@ router.post('/createBook',BookController.createBook)
 
 
 router.get('/getBooksdata', BookController.getBooksData)
-
+*/
   
 
+router.post('/createAuthor', authorController.createAuthor)
+
+
+router.post('/createBooks', authorController.createBooks)
+
+
+
+router.get('/findBooks', authorController.findBooks)
+
+
+router.get('/findupdatedBooks', authorController.findUpdatedBooks)
+
+router.get('/findRangedBooks', authorController.findRangedBooks)
 
 
 
@@ -39,6 +48,12 @@ router.get('/getBooksdata', BookController.getBooksData)
 
 
 
+
+
+
+
+
+/*
 
 
 
@@ -250,16 +265,7 @@ router.get('/missingnumber', function(req,res){
    
 
 
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 

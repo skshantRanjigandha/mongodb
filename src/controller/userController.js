@@ -9,7 +9,7 @@ const createUser = async function (req, res) {
     res.send( { msg: savedData} )
 }
 
-
+/*
 const craea = async function (req, res) {
 
 
@@ -30,3 +30,4 @@ const allBooks = async function (req, res) {
 module.exports.createUser = createUser
 
 module.exports.getUsersData = getUsersData
+*/
