@@ -1,45 +1,68 @@
 const express = require('express');
 const router = express.Router();
 
-//const BookController = require('../books/bookController.js')
-//const UserController = require('../controller/userController.js')
+const authorController = require('../controller/authorController')
+const publisherController = require('../controller/publisherController')
+const bookController = require('../controller/bookController');
 
-const authorController = require('../controller/authorController.js')
-
-
-
-/*
-router.get('/test-mongoose', function (req, res) {
-
-    res.send( { msg: "Hi FUnctionUp mongoosedb seekha !"} )
-});
-
-router.post('/createUser',UserController.createUser) 
-
-
-router.get('/getUsersdata', UserController.getUsersData) 
-
-
-router.post('/createBook',BookController.createBook) 
-
-
-router.get('/getBooksdata', BookController.getBooksData)
-*/
-  
-
-router.post('/createAuthor', authorController.createAuthor)
-
-
-router.post('/createBooks', authorController.createBooks)
+const { route } = require('express/lib/application');
 
 
 
-router.get('/findBooks', authorController.findBooks)
+
+router.post('/createnewAuthor',authorController.createnewAuthor)
+
+router.post('/newPublisher',publisherController.createnewPublisher)  
+
+//router.post('/createnewBooks',bookController.createnewBooks)  
 
 
-router.get('/findupdatedBooks', authorController.findUpdatedBooks)
+//router.get('/fetchBooks',bookController.fetchBooks)
 
-router.get('/findRangedBooks', authorController.findRangedBooks)
+
+//router.put('/updatebooks',bookController.updateBooks)
+
+
+
+
+
+
+module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -272,6 +295,4 @@ router.get('/missingnumber', function(req,res){
 
 
 
-
-module.exports = router;
 
